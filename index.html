@@ -2,16 +2,54 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Nest</title>
 </head>
 
 <body>
-    <H1>HELL WOLD</H1>
 
-    <script src="app.js"></script>
+  <!-- header  -->
+  <div class="w-full mx-auto">
+    <!-- header-top  -->
+    <div class="hidden md:flex w-full items-center justify-between text-[#7E7E7E] border-b border-[#DEDFE2] py-1">
+      <div class="w-[80%] flex items-center justify-between mx-auto"> 
+        <ul class="flex items-center gap-3">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#account">My Account</a></li>
+          <li><a href="#wishlist">Wishlist</a></li>
+          <li><a href="#order">Order Tracking</a></li>
+        </ul>
+
+        <ul class="flex items-center gap-3">
+          <!-- <p>Need help? Call Us: <a class="text-[#3BB77E]" href="#number">+1800 900</a></p> -->
+          <li>
+            <select>
+              <option value="en">English</option>
+              <option value="uz">Uzbek</option>
+            </select>
+          </li>
+
+          <li>
+            <select>
+              <option value="usd">USD</option>
+              <option value="uzs">UZS</option>
+            </select>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+    <!-- header-bottom  -->
+    <div>
+
+    </div>
+
+  </div>
+
+  <script src="./app.js"></script>
 </body>
 
 </html>
