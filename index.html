@@ -49,57 +49,93 @@
 
         <!-- header-bottom  -->
 
-        <div class="w-[80%] flex items-center justify-between mx-auto">
+        <div class="w-[80%] flex items-center justify-between mx-auto gap-5 py-3">
             <img src="./figma.img/logo.png" alt="logo">
 
-            <div class="border border-[#BCE3C9] rounded">
-                <select class="w-xs">
+            <!-- search input  -->
+            <div class="flex-1 h-[54px] border border-[#BCE3C9] rounded flex items-center gap-5 px-3">
+                <select class="w-[120px]">
                     <option value="all">All categories</option>
                     <option value="violet">violet</option>
                 </select>
 
-                <label>
-                    <input type="text" placeholder="Search for items...">
-                    <i>icon</i>
+                <span class="w-[1px] h-[20px] bg-[#DEDFE2]"></span>
+
+                <label class=" flex-1 flex items-center text-[#838383]">
+                    <input class="flex-1 outline-none" type="text" placeholder="Search for items...">
+                    <i data-lucide="search"></i>
                 </label>
             </div>
-            <select name="locationSelect" id="locationSelect" class="text-green-700">
-                <!-- <img src="figma.img/tochka.png" class="bg-red-700" alt=""> -->
-                <option value="">Your Location</option>
-            </select>
 
+            <!-- location  -->
+            <div class="relative">
+                <div
+                    class="header-loaction h-[40px] flex items-center border border-[#ECECEC] text-[#B6B6B6] rounded px-2 hover:bg-[#ECECEC] cursor-pointer">
+                    <i class="scale-70" data-lucide="map-pin"></i>
+                    <p class="text-[#3BB77E] select-none  whitespace-nowrap">Your Location</p>
+                    <i class="scale-70" data-lucide="chevron-down"></i>
+                </div>
+
+                <!-- dropdown  -->
+                <ul
+                    class="hidden mt-2 header-loaction-dropdown absolute w-full bg-[#3BB77E] text-white rounded flex flex-col gap-1 p-1">
+                    <li class="border border-green-300 p-1 rounded hover:bg-green-400 cursor-pointer">Uzbekistan</li>
+                    <li class="border border-green-300 p-1 rounded hover:bg-green-400 cursor-pointer">Russia</li>
+                    <li class="border border-green-300 p-1 rounded hover:bg-green-400 cursor-pointer">Enlish</li>
+                </ul>
+            </div>
+
+
+            <!-- icons  -->
             <div class="cardsDiv flex gap-3">
 
-                <div class="flex">
-                    <div>
-                        <img src="figma.img/yashil 3.png" alt="" class=" z-4">
-                        <i class="scale-90 z-3" data-lucide="refresh-ccw"></i>
+                <!-- compare  -->
+                <div class="flex gap-1 cursor-pointer">
+                    <div class="relative">
+                        <i data-lucide="refresh-ccw"></i>
+                        <div
+                            class="absolute bottom-3 left-3 w-[20px] h-[20px] bg-[#3BB77E] text-white flex items-center justify-center rounded-full text-sm">
+                            3
+                        </div>
                     </div>
-                    <p>compare</p>
+                    <p class="text-[#7E7E7E]">Compare</p>
                 </div>
-                <div class="flex">
-                    <i class="scale-90 " data-lucide="refresh-ccw"></i>
-                    <p>Wishlist</p>
+
+                <!-- wishlist  -->
+                <div class="flex gap-1 cursor-pointer">
+                    <div class="relative">
+                        <i data-lucide="heart"></i>
+                        <div
+                            class="absolute bottom-3 left-4 w-[20px] h-[20px] bg-[#3BB77E] text-white flex items-center justify-center rounded-full text-sm">
+                            6
+                        </div>
+                    </div>
+                    <p class="text-[#7E7E7E]">Wishlist</p>
                 </div>
-                <div class="flex">
-                    <i class="scale-90 " data-lucide="refresh-ccw"></i>
-                    <p>Cart</p>
+
+                <!-- cart  -->
+                <div class="flex gap-1 cursor-pointer">
+                    <div class="relative">
+                        <i data-lucide="shopping-cart"></i>
+                        <div
+                            class="absolute bottom-3 left-3 w-[20px] h-[20px] bg-[#3BB77E] text-white flex items-center justify-center rounded-full text-sm">
+                            2
+                        </div>
+                    </div>
+                    <p class="text-[#7E7E7E]">Cart</p>
                 </div>
-                <div class="flex">
-                    <i class="scale-90 " data-lucide="refresh-ccw"></i>
-                    <p>Account</p>
+
+                <!-- Account  -->
+                <div class="flex gap-1 cursor-pointer">
+                    <i data-lucide="user"></i>
+                    <p class="text-[#7E7E7E]">Account</p>
                 </div>
 
             </div>
-
         </div>
-
-
     </div>
-    <!-- <p>git add .</p>
-    <p>git commit -m ""</p>
-    <p>git push</p> -->
 
+    <!-- javascript  -->
     <script src="./app.js"></script>
     <script>
         lucide.createIcons();
