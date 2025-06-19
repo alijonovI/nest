@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <title>Nest</title>
 </head>
 
@@ -51,7 +53,7 @@
             <img src="./figma.img/logo.png" alt="logo">
 
             <div class="border border-[#BCE3C9] rounded">
-                <select>
+                <select class="w-xs">
                     <option value="all">All categories</option>
                     <option value="violet">violet</option>
                 </select>
@@ -61,10 +63,37 @@
                     <i>icon</i>
                 </label>
             </div>
-            <select name="" id="">
+            <select name="locationSelect" id="locationSelect" class="text-green-700">
+                <!-- <img src="figma.img/tochka.png" class="bg-red-700" alt=""> -->
                 <option value="">Your Location</option>
             </select>
+
+            <div class="cardsDiv flex gap-3">
+
+                <div class="flex">
+                    <div>
+                        <img src="figma.img/yashil 3.png" alt="" class=" z-4">
+                        <i class="scale-90 z-3" data-lucide="refresh-ccw"></i>
+                    </div>
+                    <p>compare</p>
+                </div>
+                <div class="flex">
+                    <i class="scale-90 " data-lucide="refresh-ccw"></i>
+                    <p>Wishlist</p>
+                </div>
+                <div class="flex">
+                    <i class="scale-90 " data-lucide="refresh-ccw"></i>
+                    <p>Cart</p>
+                </div>
+                <div class="flex">
+                    <i class="scale-90 " data-lucide="refresh-ccw"></i>
+                    <p>Account</p>
+                </div>
+
+            </div>
+
         </div>
+
 
     </div>
     <!-- <p>git add .</p>
@@ -72,6 +101,9 @@
     <p>git push</p> -->
 
     <script src="./app.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 
 </html>
