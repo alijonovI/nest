@@ -7,13 +7,17 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="style.css"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Nest</title>
 </head>
 
 <body>
 
     <!-- header  -->
-    <div class="w-full mx-auto">
+    <div class="w-full mx-auto bg-red-600">
         <!-- header-top  -->
         <div class="hidden md:flex w-full items-center justify-between text-[#7E7E7E] border-b border-[#DEDFE2] py-1">
 
@@ -49,7 +53,7 @@
 
         <!-- header-bottom  -->
 
-        <div class="w-[80%] flex items-center justify-between mx-auto gap-5 py-3">
+        <div class="w-[80%] flex items-center justify-between mx-auto  gap-5 py-3 headerBottom">
             <img src="./figma.img/logo.png" alt="logo">
 
             <!-- search input  -->
@@ -87,7 +91,7 @@
 
 
             <!-- icons  -->
-            <div class="cardsDiv flex gap-3">
+            <div class="cardsDiv flex gap-3 iconsDiv">
 
                 <!-- compare  -->
                 <div class="flex gap-1 cursor-pointer">
@@ -132,8 +136,99 @@
                 </div>
 
             </div>
+            <div>
+                <i class="fa-solid fa-bars barHeadr"></i>
+            </div>
         </div>
+
+        <!-- hero all categories -->
+        <div class="w-[80%] mx-auto gap-5 flex justify-between items-center heroall">
+            <!-- hero all-categoris chap tomon -->
+            <div class="heroallcategorischaptomon flex gap-5">
+                <!-- Browse All Categories -->
+                <div class="flex bg-green-400 gap-1 p-1 rounded ">
+                    <img src="figma.img/kvadrat.png" alt="">
+                    <select name="" id="" class="bg-green-400 p-px">z
+                        <option value="">Browse All Categories</option>
+                    </select>
+                </div>
+                <!-- Browse All Categories f-->
+
+                <!-- Deals -->
+                <div class="">
+                    <!-- <img src="figma.img/fire.png" alt="fire"> -->
+                    <div>Deals</div>
+                </div>
+                <!-- Deals f-->
+                <!-- Home -->
+                <div class="">
+                    <select name="" id="" class="text-[#3BB77E]">
+                        <option value="">Home</option>
+                    </select>
+                </div>
+                <!-- Home f-->
+                <div>
+                    <div>About</div>
+                </div>
+
+                <!-- Shop -->
+                <div>
+                    <select name="" id="">
+                        <option value="">Shop</option>
+                    </select>
+                </div>
+                <!-- Shop f-->
+
+                <!-- Vendors -->
+                <div>
+                    <select name="" id="">
+                        <option value="">Vendors</option>
+                    </select>
+                </div>
+                <!-- Vendors f-->
+
+                <!-- Mega -->
+                <div>
+                    <select name="" id="">
+                        <option value="">Mega</option>
+                    </select>
+                </div>
+                <!-- Mega f-->
+
+                <!-- Blog -->
+                <div>
+                    <select name="" id="">
+                        <option value="">Blog</option>
+                    </select>
+                </div>
+                <!-- Blog f-->
+                <!-- Pages -->
+                <div>
+                    <select name="" id="">
+                        <option value="">Pages</option>
+                    </select>
+                </div>
+                <!-- Pages f-->
+
+                <div>Contact</div>
+            </div>
+            <!-- hero all-categoris chap tomon f-->
+            <!-- hero all-categoris ong tomon -->
+            <div class="hero-ong flex items-center gap-1">
+                <div>
+                    <img src="figma.img/naushnik.png" alt="">
+                </div>
+                <div>
+                    <h1 class="text-[#3BB77E] text-3xl font-bold">1900 - 800</h1>
+                    <p>24/7 Support Center</p>
+                </div>
+            </div>
+            <!-- hero all-categoris ong tomon f-->
+        </div>
+
+
     </div>
+
 
     <!-- javascript  -->
     <script src="./app.js"></script>
