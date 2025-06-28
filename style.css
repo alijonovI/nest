@@ -1,3 +1,18 @@
+/* fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap'); /* quicksand */
+
+
+/* hero  */
+#hero-bottom{
+    background-image: url(./figma.img/hero-bottom-bg.png);
+    background-size: cover;
+    background-position: right;
+}
+
+.hero-bottom-h1{
+    font-family: "Quicksand", sans-serif;
+}
+
 @media (max-width: 1380px) {
     .heroall {
         display: grid;
