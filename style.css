@@ -1,12 +1,66 @@
-/* * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-} */
+@media (max-width: 1380px) {
+    .heroall {
+        display: grid;
+    }
+}
 
-/* #headerSelect{ */
-    /* background-color: red; */
-/* } */
-/* .cardsDiv{ */
-    /* font-size: 10px 0; */
-/* } */
+@media (max-width: 1350px) {
+    .iconsDiv {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1280px) {
+    .iconsDiv {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1240px) {
+    .iconsDiv {
+        display: none;
+    }
+}
+
+
+@media (max-width: 1170px) {
+    .heroallcategorischaptomon {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+    }
+}
+
+@media (max-width: 1000px) {
+    .heroall {
+        display: none;
+    }
+
+}
+
+@media (max-width: 900px) {
+    .headerBottom {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .headerBottom {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+.barHeadr {
+    display: none;
+}
+
+
+/* @media (max-width: 1000px) {
+    .barHeadr {
+        display: block;
+    }
+} */
