@@ -74,7 +74,7 @@
             <!-- location  -->
             <div class="relative">
                 <div
-                    class="header-loaction h-[40px] flex items-center border border-[#ECECEC] text-[#B6B6B6] rounded px-2 hover:bg-[#ECECEC] cursor-pointer">
+                    class="header-loaction h-[40px] flex items-center border border-[#ECECEC] text-[#B6B6B6] rounded px-2 hover:bg-[#ECECEC] cursor-pointer z-index">
                     <i class="scale-70" data-lucide="map-pin"></i>
                     <p class="text-[#3BB77E] select-none  whitespace-nowrap">Your Location</p>
                     <i class="scale-70" data-lucide="chevron-down"></i>
@@ -274,13 +274,37 @@
             <div class="hidden md:block"></div>
             <div class="hidden lg:block"></div>
 
-
         </div>
+        <!-- Featured Categories -->
+        <div id="FeaturedCategories" class="flex items-center justify-between text-[#253D4E] w-[80%] mx-auto my-5">
+            <div id="FeaturedCategoriesText"
+                class="flex items-center justify-center gap-3 sm:grid  md:grid md:grid-cols-3 lg:flex">
+                <h1 class="text-3xl">Featured Categories</h1>
+                <div id="FeaturedCategoriesPteg" class="flex gap-3 mt-3">
+                    <p>Cake & Milk</p>
+                    <p>Coffes & Teas</p>
+                    <p class="text-{#3BB77E}">Pet Foods</p>
+                    <p>Vegetables</p>
+                </div>
+            </div>
+            <div class="flex gap-1">
+                <img src="figma.img/chapStrelka.png" alt="img">
+                <img src="figma.img/ongStrelka.png" alt="img">
+            </div>
+        </div>
+        <!-- FeaturedKartochkalar -->
+        <div id="FeaturedKartochkalar">
+            <div id="teenCards"
+                class="w-[80%] flex gap-4 mx-auto  sm:grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 2xl:grid-cols-10">
+                <!-- kartochkalar shu yerga tushadi -->
+            </div>
+        </div>
+
     </div>
 
 
     <!-- javascript  -->
-    <script src="./app.js"></script>
+    <script src="./app.js" defer></script>
     <script>
         lucide.createIcons();
     </script>
