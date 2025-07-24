@@ -127,4 +127,16 @@
         grid-template-columns: repeat(1, 1fr);
     }
 }
-/* -------------- */
+
+/* --------------   heroCards media   */
+
+@media (max-width: 1850px) {
+    #heroCard {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 200px;
+        height: 180px;
+        background-color: red;
+    }
+
+}
