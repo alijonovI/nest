@@ -322,24 +322,15 @@ popularProducts.map(item => {
 // ------------------------------------ hero bottom  Daily Best Sells  card---------------/
 const bestSellsCard = [
     {
-        isTop: true,
-        top: "Hot",
-        topColor: "#F74B81",
-        image: "./figma.img/products1.png",
-        tag: "Snack",
-        description: "Seeds of Change Organic Quinoa, Brown, & Red Rice",
-        rate: 4.0,
-        by: "NestFood",
-        price: 28.50,
-        realPrice: 32.8,
+        bgImage: "figma.img/orqaFonBarg.png"
     },
     {
         isTop: true,
-        top: "Sale",
+        top: "Save 35%",
         topColor: "#67BCEE",
         image: "./figma.img/products2.png",
         tag: "Hodo Foods",
-        description: "All Natural Italian-Style ChickenMeatballs",
+        description: "All Natural Italian-Style Chicken Meatballs",
         rate: 3.5,
         by: "Stouffer",
         price: 52.85,
@@ -347,11 +338,11 @@ const bestSellsCard = [
     },
     {
         isTop: true,
-        top: "Top",
+        top: "Sale",
         topColor: "#3BB77E",
         image: "./figma.img/products3.png",
         tag: "Snack",
-        description: "Angie’s Boomchickapop Sweet & Salty Kettle Corn",
+        description: "Angie’s Boomchickapop Sweet and womnies",
         rate: 4.0,
         by: "StarKist",
         price: 48.85,
@@ -360,8 +351,9 @@ const bestSellsCard = [
     {
         isTop: false,
         image: "./figma.img/products4.png",
+        top: "Best sale",
         tag: "Snack",
-        description: "Foster Farms Takeout Crispy Classic Buffalo Wings",
+        description: "Foster Farms Takeout Crispy Classic",
         rate: 4.0,
         by: "NestFood",
         price: 17.85,
@@ -370,11 +362,11 @@ const bestSellsCard = [
 
     {
         isTop: true,
-        top: "Hot",
+        top: "Save 15%",
         topColor: "#F74B81",
         image: "./figma.img/products1.png",
         tag: "Snack",
-        description: "Seeds of Change Organic Quinoa, Brown, & Red Rice",
+        description: "Blue Diamond Almonds Lightly Salted",
         rate: 4.0,
         by: "NestFood",
         price: 28.50,
@@ -386,45 +378,38 @@ const DailyBestSellsCard = document.getElementById("DailyBestSellsCard")
 
 bestSellsCard.map((sellsitems) => {
     DailyBestSellsCard.innerHTML += `
-        <div class="w-full border border-[#ECECEC] rounded-3xl overflow-hidden relative pb-2">
-            <!-- hot  -->
-            <div
-                class="w-[60px] h-[30px] bg-[${sellsitems.topColor}] rounded-br-3xl rounded-tl-3xl flex items-center justify-center text-xs sm:text-sm text-white absolute top-0 left-0">
-                ${sellsitems.top}
-            </div>
 
-            <!-- image  -->
-            <img class="w-full h-[180px] sm:h-[200px] md:h-[220px] object-cover" src="${sellsitems.image}" alt="${item.description}">
+   <div class="w-full border border-[#ECECEC] rounded-3xl overflow-hidden relative pb-2 bg-cover bg-center"
+         style="background-image: url('${sellsitems.bgImage}');">
 
-            <!-- card bottom -->
-            <div class="px-3 space-y-1 sm:space-y-2">
-                <!-- tag -->
-                <small class="text-[#ADADAD] text-[10px] sm:text-xs">${sellsitems.tag}</small>
 
-                <!-- description -->
-                <p class="text-[#253D4E] text-sm sm:text-base">${sellsitems.description}</p>
+  <div class="w-full border border-[#ECECEC] rounded-3xl overflow-hidden relative pb-2">
+      ${sellsitems.isTop ? `
+      <div class="w-[60px] h-[30px] bg-[${sellsitems.topColor}] rounded-br-3xl rounded-tl-3xl flex items-center justify-center text-xs sm:text-sm text-white absolute top-0 left-0">
+          ${sellsitems.top}
+      </div>
+      ` : ''}
+      <img class="w-full h-[180px] sm:h-[200px] md:h-[220px] object-cover" src="${sellsitems.image}" alt="${sellsitems.description}">
 
-                <!-- star and rate number -->
-                <div class="flex items-center gap-2">
-                    <img src="./figma.img/star.png" class="w-4 sm:w-5" alt="star">
-                    <span class="text-xs sm:text-sm">${sellsitems.rate}</span>
-                </div>
+      <div class="px-3 space-y-1 sm:space-y-2">
+          <small class="text-[#ADADAD] text-[10px] sm:text-xs">${sellsitems.tag}</small>
+          <p class="text-[#253D4E] text-sm sm:text-base">${sellsitems.description}</p>
+          <div class="flex items-center gap-2">
+              <img src="./figma.img/star.png" class="w-4 sm:w-5" alt="star">
+              <span class="text-xs sm:text-sm">${sellsitems.rate}</span>
+          </div>
+          <p class="text-[10px] sm:text-xs">By <a class="text-[#3BB77E]" href="#nest">${sellsitems.by}</a></p>
+          <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                  <p class="text-[#3BB77E] text-sm sm:text-base">$<span>${sellsitems.price}</span></p>
+                  <p class="text-[10px] sm:text-xs text-[#ADADAD] line-through">$<span>${sellsitems.realPrice}</span></p>
+              </div>
+              <button class="w-[70px] sm:w-[84px] py-1 sm:py-2 flex items-center justify-center text-xs sm:text-sm bg-[#DEF9EC] rounded-lg text-[#3BB77E] cursor-pointer hover:bg-[#effff7]">
+                  <i class="scale-70" data-lucide="shopping-cart"></i> Add
+              </button>
+          </div>
+      </div>
+  </div>
+`;
 
-                <!-- by who -->
-                <p class="text-[10px] sm:text-xs">By <a class="text-[#3BB77E]" href="#nest">${sellsitems.by}</a></p>
-
-                <!-- price and add cart button -->
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-2">
-                        <p class="text-[#3BB77E] text-sm sm:text-base">$<span>${sellsitems.price}</span></p>
-                        <p class="text-[10px] sm:text-xs text-[#ADADAD] line-through">$<span>${sellsitems.realPrice}</span></p>
-                    </div>
-
-                    <button class="w-[70px] sm:w-[84px] py-1 sm:py-2 flex items-center justify-center text-xs sm:text-sm bg-[#DEF9EC] rounded-lg text-[#3BB77E] cursor-pointer hover:bg-[#effff7]">
-                        <i class="scale-70" data-lucide="shopping-cart"></i> Add
-                    </button>
-                </div>
-            </div>
-        </div>
-    `;  
 })
