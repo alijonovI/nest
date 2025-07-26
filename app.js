@@ -124,7 +124,7 @@ hero3Cards.forEach((CardTree) => {
     // const cardbgColor = bgColor
     const cards = document.createElement("div")
 
-    cards.className = `${CardTree.bg} p-4 rounded-[10px] shadow w-[482px] h-[280px] flex  items-center `;
+    cards.className = `${CardTree.bg} rounded-[10px] shadow w-[48%] h-[300px] flex  items-center w-full`;
     cards.innerHTML = `   <div class="">
     <h1 class="text-md text-[#243b4f]">${CardTree.title}</h1>
     <button class="bg-[#3BB77E] text-[#f1fcf7] w-[103px] h-[31px]">${CardTree.button}</button>
@@ -147,11 +147,284 @@ hero3Cards.forEach((CardTree) => {
 
 
 
+// popular products ==============================================================================
+const popularProducts = [
+    {
+        isTop: true,
+        top: "Hot",
+        topColor: "#F74B81",
+        image: "./figma.img/products1.png",
+        tag: "Snack",
+        description: "Seeds of Change Organic Quinoa, Brown, & Red Rice",
+        rate: 4.0,
+        by: "NestFood",
+        price: 28.50,
+        realPrice: 32.8,
+    },
+    {
+        isTop: true,
+        top: "Sale",
+        topColor: "#67BCEE",
+        image: "./figma.img/products2.png",
+        tag: "Hodo Foods",
+        description: "All Natural Italian-Style ChickenMeatballs",
+        rate: 3.5,
+        by: "Stouffer",
+        price: 52.85,
+        realPrice: 55.8,
+    },
+    {
+        isTop: true,
+        top: "Top",
+        topColor: "#3BB77E",
+        image: "./figma.img/products3.png",
+        tag: "Snack",
+        description: "Angie’s Boomchickapop Sweet & Salty Kettle Corn",
+        rate: 4.0,
+        by: "StarKist",
+        price: 48.85,
+        realPrice: 52.8,
+    },
+    {
+        isTop: false,
+        image: "./figma.img/products4.png",
+        tag: "Snack",
+        description: "Foster Farms Takeout Crispy Classic Buffalo Wings",
+        rate: 4.0,
+        by: "NestFood",
+        price: 17.85,
+        realPrice: 19.8,
+    },
+
+    {
+        isTop: true,
+        top: "Hot",
+        topColor: "#F74B81",
+        image: "./figma.img/products1.png",
+        tag: "Snack",
+        description: "Seeds of Change Organic Quinoa, Brown, & Red Rice",
+        rate: 4.0,
+        by: "NestFood",
+        price: 28.50,
+        realPrice: 32.8,
+    },
+    {
+        isTop: true,
+        top: "Sale",
+        topColor: "#67BCEE",
+        image: "./figma.img/products2.png",
+        tag: "Hodo Foods",
+        description: "All Natural Italian-Style ChickenMeatballs",
+        rate: 3.5,
+        by: "Stouffer",
+        price: 52.85,
+        realPrice: 55.8,
+    },
+    {
+        isTop: false,
+        image: "./figma.img/products4.png",
+        tag: "Snack",
+        description: "Foster Farms Takeout Crispy Classic Buffalo Wings",
+        rate: 4.0,
+        by: "NestFood",
+        price: 17.85,
+        realPrice: 19.8,
+    },
+    {
+        isTop: true,
+        top: "Top",
+        topColor: "#3BB77E",
+        image: "./figma.img/products3.png",
+        tag: "Snack",
+        description: "Angie’s Boomchickapop Sweet & Salty Kettle Corn",
+        rate: 4.0,
+        by: "StarKist",
+        price: 48.85,
+        realPrice: 52.8,
+    },
+
+    {
+        isTop: true,
+        top: "-14%",
+        topColor: "#F59758",
+        image: "./figma.img/products5.png",
+        tag: "Pet Foods",
+        description: "Blue Diamond Almonds Lightly Salted Vegetables",
+        rate: 4.0,
+        by: "NestFood",
+        price: 23.85,
+        realPrice: 25.8,
+    },
+    {
+        isTop: true,
+        top: "-14%",
+        topColor: "#F59758",
+        image: "./figma.img/products5.png",
+        tag: "Pet Foods",
+        description: "Blue Diamond Almonds Lightly Salted Vegetables",
+        rate: 4.0,
+        by: "NestFood",
+        price: 23.85,
+        realPrice: 25.8,
+    },
+];
+
+let popularProductsDiv = document.getElementById("popularProducts");
+
+popularProducts.map(item => {
+    popularProductsDiv.innerHTML += `
+        <div class="w-full border border-[#ECECEC] rounded-3xl overflow-hidden relative pb-2">
+            <!-- hot  -->
+            <div
+                class="w-[60px] h-[30px] bg-[${item.topColor}] rounded-br-3xl rounded-tl-3xl flex items-center justify-center text-xs sm:text-sm text-white absolute top-0 left-0">
+                ${item.top}
+            </div>
+
+            <!-- image  -->
+            <img class="w-full h-[180px] sm:h-[200px] md:h-[220px] object-cover" src="${item.image}" alt="${item.description}">
+
+            <!-- card bottom -->
+            <div class="px-3 space-y-1 sm:space-y-2">
+                <!-- tag -->
+                <small class="text-[#ADADAD] text-[10px] sm:text-xs">${item.tag}</small>
+
+                <!-- description -->
+                <p class="text-[#253D4E] text-sm sm:text-base">${item.description}</p>
+
+                <!-- star and rate number -->
+                <div class="flex items-center gap-2">
+                    <img src="./figma.img/star.png" class="w-4 sm:w-5" alt="star">
+                    <span class="text-xs sm:text-sm">${item.rate}</span>
+                </div>
+
+                <!-- by who -->
+                <p class="text-[10px] sm:text-xs">By <a class="text-[#3BB77E]" href="#nest">${item.by}</a></p>
+
+                <!-- price and add cart button -->
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <p class="text-[#3BB77E] text-sm sm:text-base">$<span>${item.price}</span></p>
+                        <p class="text-[10px] sm:text-xs text-[#ADADAD] line-through">$<span>${item.realPrice}</span></p>
+                    </div>
+
+                    <button class="w-[70px] sm:w-[84px] py-1 sm:py-2 flex items-center justify-center text-xs sm:text-sm bg-[#DEF9EC] rounded-lg text-[#3BB77E] cursor-pointer hover:bg-[#effff7]">
+                        <i class="scale-70" data-lucide="shopping-cart"></i> Add
+                    </button>
+                </div>
+            </div>
+        </div>
+    `;
+});
 
 
 
 
+// ------------------------------------ hero bottom  Daily Best Sells  card---------------/
+const bestSellsCard = [
+    {
+        isTop: true,
+        top: "Hot",
+        topColor: "#F74B81",
+        image: "./figma.img/products1.png",
+        tag: "Snack",
+        description: "Seeds of Change Organic Quinoa, Brown, & Red Rice",
+        rate: 4.0,
+        by: "NestFood",
+        price: 28.50,
+        realPrice: 32.8,
+    },
+    {
+        isTop: true,
+        top: "Sale",
+        topColor: "#67BCEE",
+        image: "./figma.img/products2.png",
+        tag: "Hodo Foods",
+        description: "All Natural Italian-Style ChickenMeatballs",
+        rate: 3.5,
+        by: "Stouffer",
+        price: 52.85,
+        realPrice: 55.8,
+    },
+    {
+        isTop: true,
+        top: "Top",
+        topColor: "#3BB77E",
+        image: "./figma.img/products3.png",
+        tag: "Snack",
+        description: "Angie’s Boomchickapop Sweet & Salty Kettle Corn",
+        rate: 4.0,
+        by: "StarKist",
+        price: 48.85,
+        realPrice: 52.8,
+    },
+    {
+        isTop: false,
+        image: "./figma.img/products4.png",
+        tag: "Snack",
+        description: "Foster Farms Takeout Crispy Classic Buffalo Wings",
+        rate: 4.0,
+        by: "NestFood",
+        price: 17.85,
+        realPrice: 19.8,
+    },
 
+    {
+        isTop: true,
+        top: "Hot",
+        topColor: "#F74B81",
+        image: "./figma.img/products1.png",
+        tag: "Snack",
+        description: "Seeds of Change Organic Quinoa, Brown, & Red Rice",
+        rate: 4.0,
+        by: "NestFood",
+        price: 28.50,
+        realPrice: 32.8,
+    },
+]
 
+const DailyBestSellsCard = document.getElementById("DailyBestSellsCard")
 
+bestSellsCard.map((sellsitems) => {
+    DailyBestSellsCard.innerHTML += `
+        <div class="w-full border border-[#ECECEC] rounded-3xl overflow-hidden relative pb-2">
+            <!-- hot  -->
+            <div
+                class="w-[60px] h-[30px] bg-[${sellsitems.topColor}] rounded-br-3xl rounded-tl-3xl flex items-center justify-center text-xs sm:text-sm text-white absolute top-0 left-0">
+                ${sellsitems.top}
+            </div>
 
+            <!-- image  -->
+            <img class="w-full h-[180px] sm:h-[200px] md:h-[220px] object-cover" src="${sellsitems.image}" alt="${item.description}">
+
+            <!-- card bottom -->
+            <div class="px-3 space-y-1 sm:space-y-2">
+                <!-- tag -->
+                <small class="text-[#ADADAD] text-[10px] sm:text-xs">${sellsitems.tag}</small>
+
+                <!-- description -->
+                <p class="text-[#253D4E] text-sm sm:text-base">${sellsitems.description}</p>
+
+                <!-- star and rate number -->
+                <div class="flex items-center gap-2">
+                    <img src="./figma.img/star.png" class="w-4 sm:w-5" alt="star">
+                    <span class="text-xs sm:text-sm">${sellsitems.rate}</span>
+                </div>
+
+                <!-- by who -->
+                <p class="text-[10px] sm:text-xs">By <a class="text-[#3BB77E]" href="#nest">${sellsitems.by}</a></p>
+
+                <!-- price and add cart button -->
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <p class="text-[#3BB77E] text-sm sm:text-base">$<span>${sellsitems.price}</span></p>
+                        <p class="text-[10px] sm:text-xs text-[#ADADAD] line-through">$<span>${sellsitems.realPrice}</span></p>
+                    </div>
+
+                    <button class="w-[70px] sm:w-[84px] py-1 sm:py-2 flex items-center justify-center text-xs sm:text-sm bg-[#DEF9EC] rounded-lg text-[#3BB77E] cursor-pointer hover:bg-[#effff7]">
+                        <i class="scale-70" data-lucide="shopping-cart"></i> Add
+                    </button>
+                </div>
+            </div>
+        </div>
+    `;  
+})
