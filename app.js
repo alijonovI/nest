@@ -96,22 +96,20 @@ cardsTeen.forEach((cardItem) => {
 
 const hero3Cards = [
     {
-        image: "figma.img/fire.png",
-        title: "Everyday Fresh & Clean with Or Products",
-        button: "shop now",
-        bg: "bg-[#efebd4]"
+        title: "Everyday Fresh & <br> Clean with Our <br> Products",
+        image: "./figma.img/threeCard1.png",
+        bg: "#f0e8d5"
     },
     {
-        title: " Make your Breakfast Healthy and Easy",
-        button: "shop now",
-        image: "figma.img/fire.png",
-        bg: "bg-[#f5e7e8]"
+        title: " Make your Breakfast <br> Healthy and Easy",
+        image: "./figma.img/threeCard2.png",
+        bg: "#f3e8e8"
+
     },
     {
-        title: "The best Organic Products Online",
-        button: "shop now",
-        image: "figma.img/fire.png",
-        bg: "bg-[#e8e9f4]"
+        title: "The best Organic <br> Products Online",
+        image: "./figma.img/threeCard3.png",
+        bg: "#e7eaf3"
     },
 ]
 
@@ -124,27 +122,20 @@ hero3Cards.forEach((CardTree) => {
     // const cardbgColor = bgColor
     const cards = document.createElement("div")
 
-    cards.className = `${CardTree.bg} rounded-[10px] shadow w-[48%] h-[300px] flex  items-center w-full`;
-    cards.innerHTML = `   <div class="">
-    <h1 class="text-md text-[#243b4f]">${CardTree.title}</h1>
-    <button class="bg-[#3BB77E] text-[#f1fcf7] w-[103px] h-[31px]">${CardTree.button}</button>
-</div>
-<img src="${CardTree.image}" alt="${CardTree.title}" class="w-[90px] h-[90px]"> `
+    // cards.className = `${CardTree.bg} rounded-[10px] shadow w-[48%] h-[300px] flex  items-center w-full`;
+    cards.innerHTML = ` 
+         <div style="background-image: url(${CardTree.image});"
+            class="h-[300px] w-full bg-[${CardTree.bg}] bg-bottom-right bg-no-repeat rounded-lg flex items-center justify-between p-10">
+            <div class="space-y-5">
+                <h1 class="text-2xl font-semibold">${CardTree.title}</h1>
+                <button class="py-2 px-5 bg-[#3bb77e] hover:bg-green-400 text-white rounded-lg cursor-pointer">Shop now</button>
+            </div>
+            <div></div>
+        </div>
+    `
 
     heroCard.appendChild(cards);
 })
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // popular products ==============================================================================
